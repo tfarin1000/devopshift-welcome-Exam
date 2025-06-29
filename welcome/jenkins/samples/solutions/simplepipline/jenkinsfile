@@ -24,7 +24,8 @@ pipeline {
                         // Install virtualenv if not available
                          echo "Builder"
                          sh '''#!/bin/bash
-                                
+                                echo "pwd"
+                                ls
                                 docker build --target build -t tal -f $DOCKERFILESRC .
 
                         '''
