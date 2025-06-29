@@ -23,8 +23,9 @@ pipeline {
                     script {
                         // Install virtualenv if not available
                          echo "Builder"
+                         echo "docker file src $DOCKERFILESRC"
                          sh '''#!/bin/bash
-                                echo "pwd"
+                                pwd
                                 ls
                                 docker build --target build -t tal -f $DOCKERFILESRC .
 
